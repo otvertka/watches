@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,body,#root,
+.app {
+  height: 100%;
+  width: 100%;
+  background-image: url('/src/assets/bg.jpg');
+  background-size: auto;
+  /* background-position: center; */
+  background-repeat: repeat;
+  font-family: "DM Sans", sans-serif;
+  @apply text-gray-500;
+}
+
+/* underline from center */
+.nav-link {
+  position: relative;
+  padding-bottom: 2px;
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  width: 0%;
+  height: 2px;
+  background: rgb(112, 112, 112);
+  transition: all 0.35s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after {
+  width: 100%;
+}
