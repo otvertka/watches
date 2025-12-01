@@ -33,3 +33,10 @@ export enum SelectedPage {
   
     isNewArrival?: boolean;
   }
+
+// Типы фильтров
+export type FiltersType = {
+  search: string; // ищем только по reference
+  brand: string;  // 'All' или имя бренда
+  sort: "default" | "new" | "price-asc" | "price-desc";
+};

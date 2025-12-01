@@ -15,18 +15,18 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
   const handleClick = () => {
     setSelectedPage(page as SelectedPage);
 
-    // Внутренние секции Home
+    // Секции внутри Home
     if (page === "Home" || page === "Latest arrivals") {
       if (location.pathname === "/") {
-        const element = document.getElementById(lowerPage);
-        if (element) element.scrollIntoView({ behavior: "smooth" });
+        const el = document.getElementById(lowerPage);
+        if (el) el.scrollIntoView({ behavior: "smooth" });
       } else {
         navigate("/", { state: { scrollTo: lowerPage } });
       }
       return;
     }
 
-    // Отдельные страницы
+    // Обычная страница
     navigate("/" + lowerPage);
   };
 
@@ -38,9 +38,8 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
       className={`
         nav-link
         uppercase tracking-wide
-        transition-all duration-300
-        ${isActive ? "text-white active" : "text-gray-400"}
-        hover:text-gray-600
+        transition-colors duration-300
+        ${isActive ? "text-gray-600 active" : "text-gray-400 hover:text-gray-200"}
       `}
     >
       {page}

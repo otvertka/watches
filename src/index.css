@@ -17,23 +17,132 @@ html,body,#root,
 }
 
 /* underline from center */
+/* underline from center */
+/* 🔥 Underline from center + active underline */
+/* Обертка для ссылки, чтобы width соответствовал тексту */
 .nav-link {
   position: relative;
-  padding-bottom: 2px;
+  display: inline-block; /* ширина = тексту */
+  padding-bottom: 4px;
+  text-align: left;
 }
 
+/* Псевдоэлемент underline */
 .nav-link::after {
   content: "";
   position: absolute;
-  left: 50%;
+  left: 0;
   bottom: 0;
-  width: 0%;
   height: 2px;
-  background: rgb(112, 112, 112);
-  transition: all 0.35s ease;
-  transform: translateX(-50%);
+  width: 100%; /* ширина строго под текст */
+  background: rgb(180, 180, 180);
+  transform: scaleX(0);
+  transform-origin: center;
+  transition: transform 0.35s ease;
 }
 
 .nav-link:hover::after {
-  width: 100%;
+  transform: scaleX(1);
+}
+
+/* Активная ссылка */
+.nav-link.active::after {
+  transform: scaleX(1);
+  background: rgb(75 85 99 );
+}
+
+/* Мобильное меню: важно, чтобы flex-контейнер не растягивал ссылку */
+.mobile-menu .flex-col {
+  align-items: flex-start; /* элементы по левому краю */
+}
+
+.mobile-menu .nav-link {
+  white-space: nowrap; /* текст не переносится */
+}
+
+
+/* 🔥 Burger animation */
+.burger-line {
+  width: 24px;
+  height: 2px;
+  background: white;
+  transition: all 0.9s ease;
+}
+
+/* 🔥 BACKDROP FADE */
+.mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0);
+  visibility: hidden;
+  transition: all 0.9s ease;
+  z-index: 25;
+}
+
+.mobile-backdrop.visible {
+  visibility: visible;
+  background: rgba(0,0,0,0.55);
+}
+
+/* 🔥 MOBILE MENU SLIDE */
+.mobile-menu {
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 280px;
+  height: 100vh;
+  /* background: #f6f6f6; */
+  background-image: url('/src/assets/bg.jpg');
+  background-size: auto;
+  background-position: right;
+  transform: translateX(100%);
+  transition: transform 0.8s ease;
+  z-index: 50;
+}
+
+.mobile-menu.open {
+  transform: translateX(0);
+}
+
+/* 🔥 MENU ITEMS FADE + SLIDE */
+@keyframes fadeSlide {
+  from {
+    opacity: 0;
+    transform: translateX(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fadeSlide {
+  animation: fadeSlide 0.5s ease forwards;
+}
+
+
+
+
+.marquee {
+  display: inline-block;
+  animation: marquee 25s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.footer-link {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.5s ease, transform 0.5s ease;
+}
+.footer-link:hover {
+  color: #626262; 
+  transform: translateY(-2px);
 }

@@ -1,3 +1,4 @@
+import Footer from "@/scenes/footer";
 import Navbar from "@/scenes/navbar"
 import { SelectedPage } from "@/shared/types";
 import { useEffect, useState } from "react";
@@ -21,12 +22,16 @@ const RootLayout = () => {
       return () => window.removeEventListener("scroll", handleScroll) 
     },[])
   return (
-    <div className="app bg-gray-300">
+    <div className="app bg-gray-300 min-h-screen flex flex-col">
     <Navbar 
       isTopOfPage = {isTopOfPage}
       selectedPage={selectedPage}
       setSelectedPage={setSelectedPage}/>
+      <div className="flex-grow">
+
     <Outlet/>
+      </div>
+    <Footer/>
   </div>
   )
 }
