@@ -11,15 +11,26 @@ const brands = [
   
   const BrandsMarquee = () => {
     return (
-      <div className="w-full overflow-hidden py-8 bg-black">
-        <div className="marquee whitespace-nowrap text-gray-400 text-xl tracking-widest">
+      <div className="relative w-full overflow-hidden py-10 bg-black/40 backdrop-blur-md shadow-xl mt-10">
+  
+        {/* Левый fade */}
+        <div className="fade-left" />
+  
+        {/* Правый fade */}
+        <div className="fade-right" />
+  
+        {/* Центр glow */}
+        <div className="center-glow" />
+  
+        <div className="marquee text-gray-300 text-2xl tracking-[0.3em] font-light whitespace-nowrap relative">
           {brands.map((b, i) => (
-            <span key={i} className="mx-10 inline-block">
+            <span key={i} className="mx-14 inline-block brand-item">
               {b}
             </span>
           ))}
+  
           {brands.map((b, i) => (
-            <span key={`copy-${i}`} className="mx-10 inline-block">
+            <span key={`copy-${i}`} className="mx-14 inline-block brand-item">
               {b}
             </span>
           ))}
@@ -28,5 +39,7 @@ const brands = [
     );
   };
   
+  
   export default BrandsMarquee;
+  
   

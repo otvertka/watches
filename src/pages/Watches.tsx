@@ -72,8 +72,8 @@ const Watches: React.FC = () => {
   const rows = chunkArray(filtered, columns);
 
   return (
-    <section className="mt-44 w-5/6 mx-auto flex flex-col items-center">
-      <h1 className="text-3xl mb-4">All Watches</h1>
+    <section className="mt-44 mb-32 w-5/6 mx-auto flex flex-col items-center">
+      {/* <h1 className="text-3xl mb-4">All Watches</h1> */}
       <FiltersPanel filters={filters} setFilters={setFilters} />
 
       <div className="flex flex-col gap-8 mt-8 w-full">

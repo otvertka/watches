@@ -23,7 +23,7 @@ const Home = ({ setSelectedPage }: Props) => {
           mx-auto w-5/6
           flex flex-col md:flex-row
           items-center justify-between
-          gap-12 py-20
+          gap-12 py-20 bg-black
         "
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >

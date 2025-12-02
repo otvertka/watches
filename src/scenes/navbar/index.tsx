@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import Link from "./Link";
-import Logo from "@/assets/watch_logo.png";
+import Logo from "@/assets/logo2.png";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import type { SelectedPage } from "@/shared/types";
 
@@ -25,10 +25,12 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
       {/* MAIN NAVBAR */}
       <div
         className={`fixed top-0 z-30 w-full py-6 transition-colors duration-300
-          ${isTopOfPage ? "" : "bg-black/80 backdrop-blur-md shadow-xl"}`}
+          ${isTopOfPage ? "" : "bg-black/60 backdrop-blur-md shadow-xl"}`}
       >
         <div className="mx-auto w-5/6 flex items-center justify-between">
-          <img alt="logo" src={Logo} className="w-6 h-6" />
+            <a href="/">
+          <img alt="logo" src={Logo} className="w-6 h-6 md:hidden" />
+            </a>
 
           {isAboveMediumScreens ? (
             <div className="flex justify-between w-full">
@@ -116,7 +118,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
           </button>
 
           <div className="flex flex-col gap-10 text-xl ml-24 mt-32 animate-fadeSlide">
-            <Link page="Home" {...{ selectedPage, setSelectedPage }} />
+            <Link page="Home" {...{ selectedPage, setSelectedPage }}/>
             <Link page="Latest arrivals" {...{ selectedPage, setSelectedPage }} />
             <Link page="Watches" {...{ selectedPage, setSelectedPage }} />
             <Link page="Disoveries" {...{ selectedPage, setSelectedPage }} />

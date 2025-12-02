@@ -1,4 +1,4 @@
-import Logo from '@/assets/watch_logo.png';
+import Logo from '@/assets/logo2.png';
 
 const Footer = () => {
   return (
@@ -6,7 +6,9 @@ const Footer = () => {
       <div className="mx-auto w-5/6 max-w-[1200px] flex flex-col md:flex-row items-center md:items-start justify-between gap-10">
         {/* Левый блок — логотип */}
         <div className="flex items-center">
+          <a href="/">
           <img src={Logo} alt="Logo" className="w-10 h-10" />
+          </a>
         </div>
 
         {/* Центр — контакты */}

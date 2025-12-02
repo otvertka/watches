@@ -46,8 +46,10 @@ const WatchDetailPage = () => {
             </ul>
           </div>
 
-            
-          <ActionButton>Contact us</ActionButton>
+            <div>
+
+          <ActionButton className="mt-6">Contact us</ActionButton>
+            </div>
         </div>
 
       </div>

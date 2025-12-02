@@ -30,9 +30,10 @@ const WatchSlider = ({ mainImage, images }: Props) => {
       <div className="block md:hidden">
         <Swiper
           pagination={{ clickable: true }}
+          navigation
           spaceBetween={10}
           modules={[Pagination]}
-          className="w-full h-[360px] rounded-xl overflow-hidden bg-gray-50 cursor-pointer"
+          className="w-full h-[300px] rounded-xl overflow-hidden bg-gray-50 cursor-pointer"
           onClick={() => setLightboxOpen(true)}
         >
           {gallery.map((img, i) => (

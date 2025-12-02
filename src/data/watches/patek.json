@@ -1,0 +1,67 @@
+[
+    {
+      "id": "patekphilippe-nautilus-jumbo-3700j",
+      "brand": "Patek Philippe",
+      "model": "Nautilus Jumbo 3700J Date 1979",
+      "price": 160000,
+      "mainImage": "/images/watches/patek/nautilus-jumbo-3700j/main.jpeg",
+      "images": [
+        "/images/watches/patek/nautilus-jumbo-3700j/1.jpeg",
+        "/images/watches/patek/nautilus-jumbo-3700j/2.jpeg",
+        "/images/watches/patek/nautilus-jumbo-3700j/3.jpeg",
+        "/images/watches/patek/nautilus-jumbo-3700j/4.jpeg",
+        "/images/watches/patek/nautilus-jumbo-3700j/5.jpeg",
+        "/images/watches/patek/nautilus-jumbo-3700j/6.jpeg",
+        "/images/watches/patek/nautilus-jumbo-3700j/7.jpeg",
+        "/images/watches/patek/nautilus-jumbo-3700j/8.jpeg",
+        "/images/watches/patek/nautilus-jumbo-3700j/9.jpeg",
+        "/images/watches/patek/nautilus-jumbo-3700j/10.jpeg",
+        "/images/watches/patek/nautilus-jumbo-3700j/11.jpeg"
+      ],
+      "description": "A very attractive example of the yellow gold Nautilus 3700/1J. The case remains in excellent condition, lightly polished in the past, showing only minimal wear while retaining strong proportions. The original blue tritium dial is in excellent condition with no visible defects. The hands are original, with a slight difference in the lume on the hour hand due to an old repair. The original wide yellow gold bracelet is in excellent condition with minimal stretch and retains its original clasp. Accompanied by an Extract from the Archives confirming production in 1979 and sale on June 16, 1980. The movement has been fully checked by our watchmaker and is in perfect working order. A clean and honest example of the iconic Nautilus 3700/1J — a reference that remains one of the most elegant and sought-after precious metal Nautilus models.",
+      "details": {
+        "movement": "automatic",
+        "case": "yellow gold",
+        "braceletType": "yellow gold",
+        "year": 1979,
+        "condition": "excellent",
+        "box": false,
+        "warranty":false,
+        "diameter": 40,
+        "reference": "3700/1"
+      },
+      "isNewArrival": true
+    },
+    {
+      "id": "patekphilippe-world-time-anniversary-175h",
+      "brand": "Patek Philippe",
+      "model": "World Time Anniversary 175th",
+      "price": 86500,
+      "mainImage": "/images/watches/patek/world-time-anniversary-175h/main.jpeg",
+      "images": [
+        "/images/watches/patek/world-time-anniversary-175h/1.jpeg",
+        "/images/watches/patek/world-time-anniversary-175h/2.jpeg",
+        "/images/watches/patek/world-time-anniversary-175h/3.jpeg",
+        "/images/watches/patek/world-time-anniversary-175h/4.jpeg",
+        "/images/watches/patek/world-time-anniversary-175h/5.jpeg",
+        "/images/watches/patek/world-time-anniversary-175h/6.jpeg",
+        "/images/watches/patek/world-time-anniversary-175h/7.jpeg",
+        "/images/watches/patek/world-time-anniversary-175h/8.jpeg",
+        "/images/watches/patek/world-time-anniversary-175h/9.jpeg",
+        "/images/watches/patek/world-time-anniversary-175h/10.jpeg"
+      ],
+      "description": "Released in celebration of Patek Philippe’s 175th anniversary, this rare World Time Moon reference 5575G-001 was produced in a limited edition of just 1,300 pieces. It features a 39.8mm white gold case and a striking black dial with a realistic moonphase display surrounded by 24 time zones. This particular example is a full set from 2015, coming from the original owner. The watch remains unpolished and shows only light signs of wear, preserving its sharp lines and original condition. It is offered in excellent overall condition.",
+      "details": {
+        "movement": "automatic",
+        "case": "white gold",
+        "braceletType": "alligator",
+        "year": 2015,
+        "condition": "excellent",
+        "box": true,
+        "warranty": true,
+        "diameter": 39.8,
+        "reference": "5575G-001"
+      },
+      "isNewArrival": true
+    }
+  ]
