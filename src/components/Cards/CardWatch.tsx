@@ -14,14 +14,14 @@ const CardWatch: React.FC<CardWatchProps> = ({ item }) => {
         {/* Карточка */}
         <div className="
           flex flex-col p-4 items-center justify-between 
-          bg-black border rounded-xl shadow-sm
+          bg-black shadow-sm
           text-center overflow-hidden
-          max-w-[276px]
-          h-[360px] 
+          max-w-[276px] xs:max-w-[330px]
+          h-[360px] xs:h-[460px] 
           transition-all duration-300
         ">
           
-          {/* PREMIUM IMAGE HOVER */}
+
           <motion.img
             src={item.mainImage}
             alt={`${item.brand} ${item.model}`}
@@ -32,7 +32,7 @@ const CardWatch: React.FC<CardWatchProps> = ({ item }) => {
             "
           />
 
-          {/* BRAND */}
+
           <motion.h3
             className="text-lg font-semibold text-gray-300 
                        transition-all duration-300 group-hover:text-gray-100"
@@ -40,7 +40,7 @@ const CardWatch: React.FC<CardWatchProps> = ({ item }) => {
             {item.brand}
           </motion.h3>
 
-          {/* MODEL */}
+
           <motion.p
             className="
               text-center text-sm font-medium text-gray-500 
@@ -52,7 +52,7 @@ const CardWatch: React.FC<CardWatchProps> = ({ item }) => {
             {item.model}
           </motion.p>
 
-          {/* PRICE */}
+
           <div className="
             mt-2 text-lg font-semibold text-gray-200
             transition-all duration-300 group-hover:text-white
@@ -61,7 +61,6 @@ const CardWatch: React.FC<CardWatchProps> = ({ item }) => {
           </div>
         </div>
 
-        {/* PERFECT CENTERED OVERLAY */}
         <motion.div
           className="
             absolute inset-0 

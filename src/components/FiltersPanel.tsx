@@ -8,7 +8,7 @@ type Props = {
 };
 
 const FiltersPanel: React.FC<Props> = ({ filters, setFilters }) => {
-    const brands = ["All", "Rolex", "Patek", "AP", "Omega"];
+    const brands = ["All", "Rolex", "Patek Philippe", "AP", "Omega"];
     // Если брендов много — можно динамически генерировать из allWatches
     // const brands = useMemo(() => {
 //     const s = new Set(allWatches.map(w => w.brand));
@@ -49,7 +49,7 @@ const FiltersPanel: React.FC<Props> = ({ filters, setFilters }) => {
 {/* SEARCH: ищем только по reference */}
 <input
   className="px-3 py-2 rounded bg-neutral-500 text-white outline-none"
-  placeholder="Search by reference #..."
+  placeholder="Search by reference ..."
   value={filters.search}
   onChange={(e) =>
     setFilters((prev) => ({ ...prev, search: e.target.value }))

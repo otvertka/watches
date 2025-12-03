@@ -27,13 +27,13 @@ const WatchSlider = ({ mainImage, images }: Props) => {
   return (
     <div className="w-full">
       {/* --- MOBILE --- */}
-      <div className="block md:hidden">
+      <div className="block sm:hidden">
         <Swiper
           pagination={{ clickable: true }}
           navigation
           spaceBetween={10}
           modules={[Pagination]}
-          className="w-full h-[300px] rounded-xl overflow-hidden bg-gray-50 cursor-pointer"
+          className="main-slider w-full h-[300px] overflow-hidden bg-gray-50 cursor-pointer"
           onClick={() => setLightboxOpen(true)}
         >
           {gallery.map((img, i) => (
@@ -49,14 +49,14 @@ const WatchSlider = ({ mainImage, images }: Props) => {
       </div>
 
       {/* --- DESKTOP --- */}
-      <div className="hidden md:block w-full">
+      <div className="hidden sm:block w-full">
         {/* Основной слайд */}
         <Swiper
           spaceBetween={10}
           navigation
           thumbs={{ swiper: thumbsSwiper }}
           modules={[Navigation, Thumbs]}
-          className="w-full h-[500px] rounded-xl overflow-hidden bg-gray-50 cursor-pointer"
+          className="main-slider w-full h-[500px] rounded-xl overflow-hidden bg-gray-50 cursor-pointer"
           onClick={() => setLightboxOpen(true)}
         >
           {gallery.map((img, i) => (
@@ -73,11 +73,11 @@ const WatchSlider = ({ mainImage, images }: Props) => {
         {/* Миниатюры */}
         <Swiper
           onSwiper={setThumbsSwiper}
-          slidesPerView={4}
           spaceBetween={10}
           navigation
           modules={[Navigation, Thumbs]}
-          className="mt-4 h-[120px]"
+          className="thumbs mt-4 h-[120px]"
+          slidesPerView={4}
         >
           {gallery.map((img, i) => (
             <SwiperSlide
@@ -88,7 +88,7 @@ const WatchSlider = ({ mainImage, images }: Props) => {
               <img
                 src={img}
                 alt={`thumb ${i}`}
-                className="h-full w-full object-cover rounded-lg border hover:opacity-80 transition"
+                className="h-full w-full object-cover hover:opacity-80 transition"
               />
             </SwiperSlide>
           ))}

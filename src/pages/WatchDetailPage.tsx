@@ -12,7 +12,7 @@ const WatchDetailPage = () => {
   return (
     <section className="mt-36 w-5/6 mx-auto">
 
-      <div className="wrapper grid grid-cols-1 md:grid-cols-2 gap-10">
+      <div className="wrapper grid grid-cols-1 sm:grid-cols-2 gap-10">
         
         {/* LEFT — SLIDER */}
         <div className="w-full">
