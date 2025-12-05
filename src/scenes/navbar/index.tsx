@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import { XMarkIcon } from "@heroicons/react/24/solid";
 import Link from "./Link";
 import Logo from "@/assets/logo2.png";
 import useMediaQuery from "@/hooks/useMediaQuery";
@@ -15,14 +15,14 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
   const [isMenuToggled, setIsMenuToggled] = useState(false);
 
-  // 🔒 Блокируем скролл
+
   useEffect(() => {
     document.body.style.overflow = isMenuToggled ? "hidden" : "auto";
   }, [isMenuToggled]);
 
   return (
     <nav>
-      {/* MAIN NAVBAR */}
+
       <div
         className={`fixed top-0 z-30 w-full py-6 transition-colors duration-300
           ${isTopOfPage ? "" : "bg-black/60 backdrop-blur-md shadow-xl"}`}
@@ -38,7 +38,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
                 <Link page="Home" {...{ selectedPage, setSelectedPage }} />
                 <Link page="Latest arrivals" {...{ selectedPage, setSelectedPage }} />
                 <Link page="Watches" {...{ selectedPage, setSelectedPage }} />
-                <Link page="Disoveries" {...{ selectedPage, setSelectedPage }} />
+                <Link page="Discoveries" {...{ selectedPage, setSelectedPage }} />
                 <Link page="About us" {...{ selectedPage, setSelectedPage }} />
                 <Link page="Contact" {...{ selectedPage, setSelectedPage }} />
               </div>
@@ -121,7 +121,7 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }: Props) => {
             <Link page="Home" {...{ selectedPage, setSelectedPage }}/>
             <Link page="Latest arrivals" {...{ selectedPage, setSelectedPage }} />
             <Link page="Watches" {...{ selectedPage, setSelectedPage }} />
-            <Link page="Disoveries" {...{ selectedPage, setSelectedPage }} />
+            <Link page="Discoveries" {...{ selectedPage, setSelectedPage }} />
             <Link page="About us" {...{ selectedPage, setSelectedPage }} />
             <Link page="Contact" {...{ selectedPage, setSelectedPage }} />
           </div>

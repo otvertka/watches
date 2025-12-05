@@ -15,7 +15,7 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
   const handleClick = () => {
     setSelectedPage(page as SelectedPage);
 
-    // Секции внутри Home
+
     if (page === "Home" || page === "Latest arrivals") {
       if (location.pathname === "/") {
         const el = document.getElementById(lowerPage);
@@ -26,7 +26,6 @@ const Link = ({ page, selectedPage, setSelectedPage }: Props) => {
       return;
     }
 
-    // Обычная страница
     navigate("/" + lowerPage);
   };
 

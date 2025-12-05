@@ -13,13 +13,13 @@ const brands = [
     return (
       <div className="relative w-full overflow-hidden py-10 bg-black/40 backdrop-blur-md shadow-xl mt-10">
   
-        {/* Левый fade */}
+
         <div className="fade-left" />
   
-        {/* Правый fade */}
+
         <div className="fade-right" />
   
-        {/* Центр glow */}
+
         <div className="center-glow" />
   
         <div className="marquee text-gray-300 text-2xl tracking-[0.3em] font-light whitespace-nowrap relative">

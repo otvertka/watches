@@ -1,10 +1,10 @@
 export enum SelectedPage {
-    Home ="home",
+    // Home ="home",
     LatestArrivals ="latestarrivals",
-    Watches = "watches",
-    Discoveries = "discoveries",
-    AboutUs = "aboutus",
-    Contact ="contact"
+    // Watches = "watches",
+    // Discoveries = "discoveries",
+    // AboutUs = "aboutus",
+    // Contact ="contact"
   }
 
   export interface WatchDetails {
@@ -36,7 +36,7 @@ export enum SelectedPage {
 
 // Типы фильтров
 export type FiltersType = {
-  search: string; // ищем только по reference
-  brand: string;  // 'All' или имя бренда
+  search: string; 
+  brand: string; 
   sort: "default" | "new" | "price-asc" | "price-desc";
 };

@@ -35,7 +35,7 @@ const CardWatch: React.FC<CardWatchProps> = ({ item }) => {
 
           <motion.h3
             className="text-lg font-semibold text-gray-300 
-                       transition-all duration-300 group-hover:text-gray-100"
+                      transition-all duration-300 group-hover:text-gray-100"
           >
             {item.brand}
           </motion.h3>
