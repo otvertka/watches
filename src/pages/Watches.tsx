@@ -12,7 +12,7 @@ export type FiltersType = {
   sort: "default" | "new" | "price-asc" | "price-desc";
 };
 
-// Вспомогательная функция: разбиваем массив на ряды
+
 const chunkArray = <T,>(arr: T[], size: number): T[][] => {
   const chunks: T[][] = [];
   for (let i = 0; i < arr.length; i += size) {
@@ -40,7 +40,7 @@ const Watches: React.FC = () => {
 
   const [columns, setColumns] = useState<number>(4);
 
-  // Динамическое определение колонок по ширине окна
+
   const updateColumns = () => {
     const w = window.innerWidth;
     if (w < 480) setColumns(1);
@@ -49,8 +49,8 @@ const Watches: React.FC = () => {
   };
 
   useEffect(() => {
-    updateColumns(); // при монтировании
-    window.addEventListener("resize", updateColumns); // при ресайзе
+    updateColumns(); 
+    window.addEventListener("resize", updateColumns);
     return () => window.removeEventListener("resize", updateColumns);
   }, []);
 
@@ -73,7 +73,6 @@ const Watches: React.FC = () => {
 
   return (
     <section className="mt-44 mb-32 w-5/6 mx-auto flex flex-col items-center">
-      {/* <h1 className="text-3xl mb-4">All Watches</h1> */}
       <FiltersPanel filters={filters} setFilters={setFilters} />
 
       <div className="flex flex-col gap-8 mt-8 w-full">

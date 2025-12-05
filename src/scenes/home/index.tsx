@@ -28,12 +28,11 @@ const Home = ({ setSelectedPage }: Props) => {
         onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
       >
 
-        {/* LEFT — GALLERY (always first visually) */}
+
         <div className="flex justify-center w-full md:w-1/2">
           <HomeGallery />
         </div>
 
-        {/* RIGHT — TEXT + BUTTON */}
         <div className="
           flex flex-col items-center md:items-start
           text-center md:text-left gap-4 md:w-1/2
@@ -63,7 +62,6 @@ const Home = ({ setSelectedPage }: Props) => {
       <BrandsMarquee />
 
       <LatestArrivals setSelectedPage={setSelectedPage} />
-      {/* <Footer /> */}
     </section>
   );
 };

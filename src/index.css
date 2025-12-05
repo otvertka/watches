@@ -15,29 +15,22 @@ html,body,#root,
   font-family: "DM Sans", sans-serif;
   @apply text-gray-500;
 }
-/* .main-card {
-  background-image: url("/src/assets/fon.jpg");
-} */
 
-/* underline from center */
-/* underline from center */
-/* 🔥 Underline from center + active underline */
-/* Обертка для ссылки, чтобы width соответствовал тексту */
 .nav-link {
   position: relative;
-  display: inline-block; /* ширина = тексту */
+  display: inline-block; 
   padding-bottom: 4px;
   text-align: left;
 }
 
-/* Псевдоэлемент underline */
+
 .nav-link::after {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
   height: 1px;
-  width: 100%; /* ширина строго под текст */
+  width: 100%; 
   background: rgb(180, 180, 180);
   transform: scaleX(0);
   transform-origin: center;
@@ -48,23 +41,20 @@ html,body,#root,
   transform: scaleX(1);
 }
 
-/* Активная ссылка */
 .nav-link.active::after {
   transform: scaleX(1);
   background: rgb(75 85 99 );
 }
 
-/* Мобильное меню: важно, чтобы flex-контейнер не растягивал ссылку */
 .mobile-menu .flex-col {
-  align-items: flex-start; /* элементы по левому краю */
+  align-items: flex-start; 
 }
 
 .mobile-menu .nav-link {
-  white-space: nowrap; /* текст не переносится */
+  white-space: nowrap; 
 }
 
 
-/* 🔥 Burger animation */
 .burger-line {
   width: 24px;
   height: 2px;
@@ -72,7 +62,6 @@ html,body,#root,
   transition: all 0.9s ease;
 }
 
-/* 🔥 BACKDROP FADE */
 .mobile-backdrop {
   position: fixed;
   inset: 0;
@@ -87,14 +76,12 @@ html,body,#root,
   background: rgba(0,0,0,0.55);
 }
 
-/* 🔥 MOBILE MENU SLIDE */
 .mobile-menu {
   position: fixed;
   right: 0;
   top: 0;
   width: 280px;
   height: 100vh;
-  /* background: #f6f6f6; */
   background-image: url('/src/assets/bg.jpg');
   background-size: auto;
   background-position: right;
@@ -107,7 +94,6 @@ html,body,#root,
   transform: translateX(0);
 }
 
-/* 🔥 MENU ITEMS FADE + SLIDE */
 @keyframes fadeSlide {
   from {
     opacity: 0;
@@ -124,8 +110,6 @@ html,body,#root,
 }
 
 
-
-/* fade-in / fade-out */
 .fade-left,
 .fade-right {
   position: absolute;
@@ -188,7 +172,7 @@ html,body,#root,
   border-radius: 0;
   background-color: black;
 }
-/* скрыть стрелки только в большом слайдере */
+
 .main-slider .swiper-button-next,
 .main-slider .swiper-button-prev {
   display: none !important;
@@ -198,7 +182,7 @@ html,body,#root,
   border: none;
   border-radius: 0;
 }
-/* миниатюры — белые стрелки */
+
 .thumbs .swiper-button-next,
 .thumbs .swiper-button-prev {
   color: white !important;
